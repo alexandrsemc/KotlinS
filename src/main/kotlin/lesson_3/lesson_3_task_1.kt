@@ -1,4 +1,4 @@
-package lesson_2
+package lesson_3
 
 fun main() {
     var greetings = "Good afternoon"
