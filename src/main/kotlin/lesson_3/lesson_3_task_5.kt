@@ -2,7 +2,9 @@ package lesson_3
 
 fun main(){
     val move = "D2-D4;0"
-    move.split('-',';')
+    val moveSplit = move.split("-" , ";" )
+
+    println(moveSplit)
 
     val from = "D2"
     val to = "D4"
