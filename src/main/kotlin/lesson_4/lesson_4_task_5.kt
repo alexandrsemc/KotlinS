@@ -1,13 +1,14 @@
 package lesson_4
 
 fun main(){
-    val presenceOfDamage = readln().toBoolean()
-    val crewComposition = readln().toInt()
-    val boxesOfProvisions = readln().toInt()
-    val goodWeather = readln().toBoolean()
-    val theShipIsReady = (presenceOfDamage == false) && (crewComposition in MINIMUM_CREW .. MAXIMUM_CREW) && (boxesOfProvisions >= 50) && (goodWeather == true)
+    val isNotPresenceOfDamage = readln().toBoolean()
+    val isCrewComposition = readln().toInt()
+    val isBoxesOfProvisions = readln().toInt()
+    val isGoodWeather = readln().toBoolean()
+    val isTheShipIsReady = (isNotPresenceOfDamage) && (isCrewComposition in MINIMUM_CREW .. MAXIMUM_CREW)
+            && (isBoxesOfProvisions >= 50) && (isGoodWeather) || (isCrewComposition == MAXIMUM_CREW) && (isBoxesOfProvisions >= 50) && (isGoodWeather)
 
-    println( "The ship is ready to sail: ${theShipIsReady}")
+    println( "The ship is ready to sail: ${isTheShipIsReady}")
 }
 const val MINIMUM_CREW = 55
 const val MAXIMUM_CREW = 70
