@@ -1,7 +1,7 @@
 package lesson_5
 
 fun main(){
-    val yearOfBirth = readln()!!.toInt()
+    val yearOfBirth = readln().toInt()
     val yearNow = 2023
     val year = yearNow - yearOfBirth
     val result = if (year >= AGE_OF_MAJORITY) "Показать экран со скрытым контентом"
