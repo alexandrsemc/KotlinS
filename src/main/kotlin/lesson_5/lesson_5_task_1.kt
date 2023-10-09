@@ -1,11 +1,14 @@
 package lesson_5
 
 fun main(){
-    val task  = "1 + 6"
-    println(task)
+    val numberFirst = 1
+    val numberSecond = 6
+    val task  = numberFirst + numberSecond
 
-    val solution = readln()!!.toInt()
-    val result = if( solution == 7) "Добро пожаловать!"
+    println("Решите пример и введите ответ: ${numberFirst} + ${numberSecond} ")
+
+    val solution = readln().toInt()
+    val result = if( solution == task) "Добро пожаловать!"
     else "Доступ запрещен."
 
     println(result)
