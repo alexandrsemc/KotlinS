@@ -1,6 +1,7 @@
 package lesson_8
 
 fun main() {
+
     val day1 = readln().toInt()
     val day2 = readln().toInt()
     val day3 = readln().toInt()
@@ -10,4 +11,5 @@ fun main() {
     val day7 = readln().toInt()
     val viewsPerWeek = intArrayOf(day1, day2, day3, day4, day5, day6, day7)
     println(viewsPerWeek.sum())
+
 }
