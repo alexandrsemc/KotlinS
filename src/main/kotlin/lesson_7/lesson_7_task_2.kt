@@ -12,6 +12,7 @@ fun main() {
 
         if (random == code) {
             println("Добро пожаловать!")
+            return
         }
 
     } while (random != code)
