@@ -8,7 +8,7 @@ fun main() {
     for (i in seaBassWithLeeks) {
         if (i == ingredient)
             println("Ингредиент $ingredient в рецепте есть")
-        continue
+        break
     }
     println("Такого ингредиента в рецепте нет")
 }
