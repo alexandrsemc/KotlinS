@@ -1,9 +1,8 @@
 package lesson_9
 
 fun main() {
-    val ingredients = readln()
-    val mutableList: MutableList<String> = mutableListOf(ingredients)
-    println(mutableList)
-    mutableList.sort()
-    println(mutableList)
+    val userIngredients = "olives, cucumbers, potato, leek, water"
+    val list = mutableListOf("olives", "cucumbers", "potato", "leek", "water")
+    list.sort()
+    println(list)
 }
