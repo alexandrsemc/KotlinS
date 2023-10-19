@@ -9,9 +9,10 @@ fun main() {
     println("Какой ингредиент вы хотели бы заменить?")
     val ingredient = readln()
     if (ingredient in seaBassWithLeeks) {
-        println("Какой ингредиент вы хотели бы доавить?")
+        println("Какой ингредиент вы хотели бы добавить?")
         val newIngredient = readln()
-        seaBassWithLeeks.set(1, newIngredient)
+        seaBassWithLeeks.indexOf(ingredient)
+        seaBassWithLeeks[seaBassWithLeeks.indexOf(ingredient)] = newIngredient
     } else {
         println("Такого ингредиента в рецепте нет")
         return
