@@ -1,17 +1,14 @@
 package lesson_10
 
 fun main() {
-    getLength()
-}
-
-fun getLength(): String {
-    val login = readln().length
-    val password = readln().length
-    val minCharacterLength = 4
-    val result = if (login >= minCharacterLength && password
-        >= minCharacterLength
+    val login = readln()
+    val password = readln()
+    val result = if (getLength(login) && getLength(password)
     ) "Добро пожаловать"
     else "Логин и пароль недостаточно длиные"
     println(result)
-    return result
+}
+
+fun getLength(a: String): Boolean {
+    return a.length >= 4
 }
