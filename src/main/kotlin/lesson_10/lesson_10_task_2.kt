@@ -12,5 +12,7 @@ fun main() {
 }
 
 fun validateLength(a: String): Boolean {
-    return a.length >= 4
+    return a.length >= MINIMUM_NUMBER_OF_CHARACTERS
 }
+
+const val MINIMUM_NUMBER_OF_CHARACTERS = 4
