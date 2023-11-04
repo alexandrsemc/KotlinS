@@ -6,15 +6,17 @@ fun main() {
         login = "Pettson",
         password = "Findus",
         email = "Sven@.com",
-        bio = "Human",
     )
 
     user2.userInformation()
 
-    user2.bio = user2.writeTextInBio()
-    println("Запись в поле Био: ${user2.bio}")
+    user2.writeTextInBio()
 
-    user2.password = user2.changePassword()
+    if (user2.changePassword() == "Findus") {
+        println("Введите новый пароль: ")
+    }
+    user2.password = readln()
+
     println("Пароль изменен: ${user2.password}")
 
     val user3: User2 = User2(
@@ -22,18 +24,16 @@ fun main() {
         login = "Sven",
         password = "A5",
         email = "Cat@.com",
-        bio = "Man",
     )
 
     user3.password = "A6"
 
+    println()
     println(user3.id)
     println(user3.login)
     println(user3.password)
     println(user3.email)
     println(user3.bio)
-
-
 }
 
 class User2(
@@ -41,7 +41,7 @@ class User2(
     val login: String,
     var password: String,
     val email: String,
-    var bio: String,
+    var bio: Boolean = false,
 ) {
 
     fun userInformation() {
@@ -50,21 +50,17 @@ class User2(
         println("Пароль: $password")
         println("Электронная почта: $email")
         println("Био: $bio")
+        println()
     }
 
-    fun writeTextInBio(): String {
+    fun writeTextInBio() {
         println("Считываем из консоли текст: ")
-        return readln()
-
+        bio = readln().toBoolean()
     }
 
     fun changePassword(): String {
         println("Введите текущий пароль:")
-        if (readln() == "Findus") {
-            println("Введите новый пароль: ")
-        }
         return readln()
-
     }
 
 }
