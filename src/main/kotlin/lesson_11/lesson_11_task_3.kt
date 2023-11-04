@@ -1,30 +1,45 @@
 package lesson_11
 
 fun main() {
-    Rooms(
+    Room(
         cover = "Fox",
         name = "Катя",
-        listOfParticipants = mutableListOf("Александр", "Сергей", "Анастасия", "Мария", "Григорий"),
         speakerStatus = listOf("разговаривает", "микрафон выключен", "пользователь заглушин"),
     )
-    Rooms(
+
+    Member(
+        listOfParticipants = mutableListOf("Александр"),
+    )
+
+    User5(
+        cover = "Mouse",
+        name = "Mickey",
+    )
+
+    Room(
         cover = "Sun",
         name = "Александр",
-        listOfParticipants = mutableListOf("Александр"),
         speakerStatus = listOf("разговаривает"),
     )
 }
 
-class Rooms(
+class Member(
+    val listOfParticipants: MutableList<String>,
+)
+
+class User5(
     val cover: String,
     val name: String,
-    val listOfParticipants: MutableList<String>,
+)
+
+class Room(
+    val cover: String,
+    val name: String,
     val speakerStatus: List<String>,
 ) {
     fun clickOnAvatar() {
 
     }
-
     fun microphoneAction() {
 
     }
