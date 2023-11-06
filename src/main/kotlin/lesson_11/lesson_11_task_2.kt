@@ -6,7 +6,7 @@ fun main() {
         login = "Pettson",
         password = "Findus",
         email = "Sven@.com",
-        bio = " "
+        bio = ""
     )
     user2.userInformation()
 
@@ -43,16 +43,14 @@ class User2(
     fun writeTextInBio() {
         println("Считываем из консоли текст: ")
         bio = readln()
-        println("Запись в Био: $bio")
-        println()
+        println("Запись в Био: $bio\n ")
     }
 
     fun changePassword() {
         println("Считываем текущий пароль: $password")
         println("Запрашиваем новый пароль: ")
         password = readln()
-        println("Пароль изменен: $password")
-        println()
+        println("Пароль изменен: $password\n ")
     }
 }
 
