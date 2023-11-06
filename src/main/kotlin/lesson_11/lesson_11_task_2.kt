@@ -6,34 +6,26 @@ fun main() {
         login = "Pettson",
         password = "Findus",
         email = "Sven@.com",
+        bio = " "
     )
-
     user2.userInformation()
 
     user2.writeTextInBio()
 
-    if (user2.changePassword() == "Findus") {
-        println("Введите новый пароль: ")
-    }
-    user2.password = readln()
-
-    println("Пароль изменен: ${user2.password}")
+    user2.changePassword()
 
     val user3: User2 = User2(
         id = 334,
         login = "Sven",
         password = "A5",
         email = "Cat@.com",
+        bio = "Animal"
     )
-
-    user3.password = "A6"
-
+    println("Создали обьект и заполнили: \nИдентификатор: ${user3.id} \nЛогин: ${user3.login} \nПароль: ${user3.password} \nЭлектронная почта: ${user3.email} \nБио: ${user3.bio}")
     println()
-    println(user3.id)
-    println(user3.login)
-    println(user3.password)
-    println(user3.email)
-    println(user3.bio)
+    user3.password = "A6"
+    println("Заменили пароль, выводим обновленную информацию:")
+    println("Идентификатор: ${user3.id} \nЛогин: ${user3.login} \nПароль: ${user3.password} \nЭлектронная почта: ${user3.email} \nБио: ${user3.bio}")
 }
 
 class User2(
@@ -41,27 +33,27 @@ class User2(
     val login: String,
     var password: String,
     val email: String,
-    var bio: Boolean = false,
+    var bio: String,
 ) {
 
     fun userInformation() {
-        println("Идентификатор: $id")
-        println("Логин: $login")
-        println("Пароль: $password")
-        println("Электронная почта: $email")
-        println("Био: $bio")
-        println()
+        println("Идентификатор: $id \nЛогин: $login \nПароль: $password \nЭлектронная почта: $email \nБио: $bio")
     }
 
     fun writeTextInBio() {
         println("Считываем из консоли текст: ")
-        bio = readln().toBoolean()
+        bio = readln()
+        println("Запись в Био: $bio")
+        println()
     }
 
-    fun changePassword(): String {
-        println("Введите текущий пароль:")
-        return readln()
+    fun changePassword() {
+        println("Считываем текущий пароль: $password")
+        println("Запрашиваем новый пароль: ")
+        password = readln()
+        println("Пароль изменен: $password")
+        println()
     }
-
 }
+
 
