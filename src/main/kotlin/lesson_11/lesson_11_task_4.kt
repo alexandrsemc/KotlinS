@@ -1,24 +1,10 @@
 package lesson_11
 
 fun main() {
-    FavoritesTop(
-        coverTop = "Фото-ассорти",
-        nameTop = "ИЗБРАННОЕ"
-    )
-
-    Dish(
-        cover = "фото-гамбургер",
-        name = "КЛАССИЧЕСКИЙ ГАМБУРГЕР",
-    )
-
-    Dish(
-        cover = "фото-чизбургер",
-        name = "ЧИЗБУРГЕР",
-    )
-
-    Dish(
-        cover = "фото-бургер с грибами и сыром",
-        name = "БУРГЕР С ГРИБАМИ И СЫРОМ",
+    CategoryDish(
+        category = Dish(
+            name = ("Классический гамбургер, Чизбургер, Бургер с грибами и сыром")
+        )
     )
 
     Button(
@@ -30,16 +16,16 @@ fun main() {
         color = "цвет кнопки",
         name = "ИЗБРАННОЕ",
     )
+
 }
 
-class FavoritesTop(
-    val coverTop: String,
-    val nameTop: String,
+class CategoryDish(
+    val category: Dish,
 )
 
 class Dish(
-    val cover: String,
-    val name: String,
+    name: String,
+    val isFavorite: Boolean = true,
 )
 
 class Button(
