@@ -6,7 +6,6 @@ fun main() {
         login = "Pettson",
         password = "Findus",
         email = "Sven@.com",
-        bio = ""
     )
     user2.userInformation()
 
@@ -19,7 +18,6 @@ fun main() {
         login = "Sven",
         password = "A5",
         email = "Cat@.com",
-        bio = "Animal"
     )
     println("Создали обьект и заполнили: \nИдентификатор: ${user3.id} \nЛогин: ${user3.login} \nПароль: ${user3.password} \nЭлектронная почта: ${user3.email} \nБио: ${user3.bio}")
     println()
@@ -33,7 +31,7 @@ class User2(
     val login: String,
     var password: String,
     val email: String,
-    var bio: String,
+    var bio: String = "",
 ) {
 
     fun userInformation() {
