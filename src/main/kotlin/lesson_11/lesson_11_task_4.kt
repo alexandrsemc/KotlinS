@@ -1,34 +1,42 @@
 package lesson_11
 
 fun main() {
+    Dish(
+        name = "КЛАССИЧЕСКИЙ ГАМБУРГЕР",
+        picture = "cсылка на картинку",
+        ingredients = listOf("Котлета, лук, помидор, салат, булочка"),
+    )
+
+    Dish(
+        name = "ЧИЗБУРГЕР",
+        picture = "cсылка на картинку",
+        ingredients = listOf("Котлета, сыр, яйцо, лук, помидор, салат, булочка"),
+    )
+
+    Dish(
+        name = "БУРГЕР С ГРИБАМИ И СЫРОМ",
+        picture = "cсылка на картинку",
+        ingredients = listOf("Котлета, грибы, сыр, яйцо, лук, помидор, салат, булочка"),
+    )
+
     CategoryDish(
-        category = Dish(
-            name = ("Классический гамбургер, Чизбургер, Бургер с грибами и сыром")
+        nameCategory = "ИЗБРАННОЕ",
+        picture = "cсылка на картинку",
+        listOfDish = listOf(
+            "КЛАССИЧЕСКИЙ ГАМБУРГЕР,ЧИЗБУРГЕР,БУРГЕР С ГРИБАМИ И СЫРОМ"
         )
     )
-
-    Button(
-        color = "цвет кнопки",
-        name = "КАТЕГОРИИ",
-    )
-
-    Button(
-        color = "цвет кнопки",
-        name = "ИЗБРАННОЕ",
-    )
-
 }
 
 class CategoryDish(
-    val category: Dish,
+    val nameCategory: String,
+    val picture: String,
+    val listOfDish: List<String>,
 )
 
 class Dish(
-    name: String,
-    val isFavorite: Boolean = true,
+    val name: String,
+    val picture: String,
+    val ingredients: List<String>,
 )
 
-class Button(
-    val color: String,
-    val name: String,
-)
