@@ -1,16 +1,14 @@
 package lesson_3
 
-fun main(){
+fun main() {
     val move = "D2-D4;0"
-    (move.split("-", ";"))
-    val sign1 = '-'
-    val sing2 = ';'
-    val from = "D2"
-    val to = "D4"
-    val moveNumber = "0"
+    val moveSplit: List<String> = move.split("-", ";")
 
-    println("${from}\n${sign1}\n${to}\n${sing2}\n${moveNumber}")
+    val from = moveSplit[0]
+    val to = moveSplit[1]
+    val moveNumber = moveSplit[2]
 
+    println("${from}\n${to}\n${moveNumber}")
 }
 
 
