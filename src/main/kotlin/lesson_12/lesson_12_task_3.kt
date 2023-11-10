@@ -2,16 +2,18 @@ package lesson_12
 
 fun main() {
     val weatherInCelsius = WeatherToday(305, 297, false)
-    weatherInCelsius.daytimeTemperature = weatherInCelsius.daytimeTemperature - TEMPERATURE_IN_KELVINS
-    weatherInCelsius.nightTemperature = weatherInCelsius.nightTemperature - TEMPERATURE_IN_KELVINS
+    weatherInCelsius.daytimeTemperature
+    weatherInCelsius.nightTemperature
     weatherInCelsius.precipitation = false
 
     weatherInCelsius.dataOutput()
 }
 
-class WeatherToday(kelvinDay: Int, kelvinNight: Int, rain: Boolean) {
-    var daytimeTemperature = kelvinDay
-    var nightTemperature = kelvinNight
+class WeatherToday(temperatureInKelvinsDay: Int, temperatureInKelvinsNight: Int, rain: Boolean) {
+    val temperatureInKelvinsDay = 305
+    val temperatureInKelvinsNight = 297
+    val daytimeTemperature = temperatureInKelvinsDay - TEMPERATURE_IN_KELVINS
+    val nightTemperature = temperatureInKelvinsNight - TEMPERATURE_IN_KELVINS
     var precipitation = rain
 
     fun dataOutput() {
