@@ -10,8 +10,6 @@ fun main() {
 }
 
 class WeatherToday(temperatureInKelvinsDay: Int, temperatureInKelvinsNight: Int, rain: Boolean) {
-    val temperatureInKelvinsDay = 305
-    val temperatureInKelvinsNight = 297
     val daytimeTemperature = temperatureInKelvinsDay - TEMPERATURE_IN_KELVINS
     val nightTemperature = temperatureInKelvinsNight - TEMPERATURE_IN_KELVINS
     var precipitation = rain
