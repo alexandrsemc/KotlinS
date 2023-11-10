@@ -1,19 +1,19 @@
 package lesson_11
 
 fun main() {
-    Dish(
+    val hamburger = Dish(
         name = "КЛАССИЧЕСКИЙ ГАМБУРГЕР",
         picture = "cсылка на картинку",
         ingredients = listOf("Котлета, лук, помидор, салат, булочка"),
     )
 
-    Dish(
+    val cheeseburger = Dish(
         name = "ЧИЗБУРГЕР",
         picture = "cсылка на картинку",
         ingredients = listOf("Котлета, сыр, яйцо, лук, помидор, салат, булочка"),
     )
 
-    Dish(
+    val burger = Dish(
         name = "БУРГЕР С ГРИБАМИ И СЫРОМ",
         picture = "cсылка на картинку",
         ingredients = listOf("Котлета, грибы, сыр, яйцо, лук, помидор, салат, булочка"),
@@ -22,16 +22,14 @@ fun main() {
     CategoryDish(
         nameCategory = "ИЗБРАННОЕ",
         picture = "cсылка на картинку",
-        listOfDish = listOf(
-            "КЛАССИЧЕСКИЙ ГАМБУРГЕР,ЧИЗБУРГЕР,БУРГЕР С ГРИБАМИ И СЫРОМ"
-        )
+        listOfDish = listOf(hamburger, cheeseburger, burger)
     )
 }
 
 class CategoryDish(
     val nameCategory: String,
     val picture: String,
-    val listOfDish: List<String>,
+    val listOfDish: List<Dish>,
 )
 
 class Dish(
