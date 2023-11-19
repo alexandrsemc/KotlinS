@@ -4,7 +4,6 @@ fun main() {
     val length = readln().toInt()
     println(generatePassword(length))
 }
-
 fun generatePassword(length: Int): String {
     val numbers = ('0'..'9')
     val symbols = (' '..'/')
