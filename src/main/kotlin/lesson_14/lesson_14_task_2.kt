@@ -5,11 +5,11 @@ open class Liner2(
     val liftingCapacityTons: Int,
     val numberOfPassengers: Int,
 ) {
-    open fun outputOfShipProperties() {
+    open fun displayShipProperties() {
         println("Свойство Лайнера: скорость - $speedInKnots, грузоподьемность - $liftingCapacityTons, вместительность - $numberOfPassengers")
     }
 
-    fun ladderExtension() {
+    fun pullOutTheLadder() {
         println("Выдвижение горизонтального трапа со шкафута")
     }
 }
@@ -20,11 +20,11 @@ class Cargo2(
     numberOfPassengers: Int,
 ) : Liner2(speedInKnots, liftingCapacityTons, numberOfPassengers) {
 
-    fun faucetActivation() {
+    fun activateTheTap() {
         println("Активация погрузочного крана")
     }
 
-    override fun outputOfShipProperties() {
+    override fun displayShipProperties() {
         println("Свойство Грузового: скорость - $speedInKnots, грузоподьемность - $liftingCapacityTons, вместительность - $numberOfPassengers")
 
     }
@@ -36,11 +36,11 @@ class Icebreaker2(
     numberOfPassengers: Int,
 ) : Liner2(speedInKnots, liftingCapacityTons, numberOfPassengers) {
 
-    fun gateOpening() {
+    fun openTheGate() {
         println("Открытие ворот со стороны кормы")
     }
 
-    override fun outputOfShipProperties() {
+    override fun displayShipProperties() {
         println("Свойство Ледокола: скорость - $speedInKnots, грузоподьемность - $liftingCapacityTons, вместительность - $numberOfPassengers")
     }
 }
@@ -48,11 +48,11 @@ class Icebreaker2(
 fun main() {
 
     val liner2 = Liner2(20, 15000, 7000)
-    liner2.outputOfShipProperties()
+    liner2.displayShipProperties()
 
     val cargo2 = Cargo2(10, 25000, 1000)
-    cargo2.outputOfShipProperties()
+    cargo2.displayShipProperties()
 
     val icebreaker2 = Icebreaker2(5, 20000, 2000)
-    icebreaker2.outputOfShipProperties()
+    icebreaker2.displayShipProperties()
 }
