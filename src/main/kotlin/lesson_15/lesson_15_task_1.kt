@@ -1,20 +1,14 @@
 package lesson_15
 
-abstract class FlyingCreatures : MovementGull, MovementDuck {
-}
-
-abstract class SwimmingCreatures : MovementCarp {
-}
-
-class Carp : SwimmingCreatures() {
-    override fun swimInTheWater() {
+class Carp : Swimming {
+    override fun swim() {
         println("Передвижение карась:")
         println("Медленно плыть в толще воды")
         println()
     }
 }
 
-class Gull : FlyingCreatures() {
+class Gull : Flying, Diving {
     override fun fly() {
         println("Передвижение чайка:")
         println("Лететь над океаном")
@@ -26,32 +20,36 @@ class Gull : FlyingCreatures() {
     }
 }
 
-class Duck : FlyingCreatures() {
+class Duck : Swimming, Flying, Diving {
     override fun fly() {
         println("Передвижение утка:")
-        println("Плыть по воде")
+        println("Перелет на другое озеро")
     }
 
     override fun dive() {
         println("Нырять за вкусной травой")
     }
+
+    override fun swim() {
+        println("Плыть по воде")
+    }
 }
 
-interface MovementCarp {
-    fun swimInTheWater()
+interface Swimming {
+    fun swim()
 }
 
-interface MovementGull {
+interface Flying {
     fun fly()
 }
 
-interface MovementDuck {
+interface Diving {
     fun dive()
 }
 
 fun main() {
     val carp = Carp()
-    carp.swimInTheWater()
+    carp.swim()
 
     val gull = Gull()
     gull.fly()
@@ -60,4 +58,5 @@ fun main() {
     val duck = Duck()
     duck.fly()
     duck.dive()
+    duck.swim()
 }
