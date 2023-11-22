@@ -1,7 +1,7 @@
 package lesson_16
 
 class Cube() {
-    private val randomNumber = 1
+    private val randomNumber = (1..6).random()
 
     fun numberPrintout() {
         println(randomNumber)
