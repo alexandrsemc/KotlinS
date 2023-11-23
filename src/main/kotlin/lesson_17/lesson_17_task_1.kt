@@ -4,11 +4,11 @@ class Animal() {
     var question = "Кто сказал мяу?"
         get() = field
         set(value: String) {
-            field = "Кто сказал гав?"
+            field = value
         }
     var answer = "Котенок"
         set(value: String) {
-            field = "Щенок"
+            field = value
         }
 }
 
