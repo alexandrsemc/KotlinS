@@ -23,19 +23,18 @@ enum class Category {
     MISCELLANEOUS;
 }
 
-fun setCategory(category: Category) :String{
+fun setCategory(category: Category) =
     when (category) {
-        Category.CLOTH -> println("Одежда")
-        Category.STATIONERY -> println("Канцелярские товары")
-        Category.MISCELLANEOUS -> println("Разное")
+        Category.CLOTH -> "Одежда"
+        Category.STATIONERY -> "Канцелярские товары"
+        Category.MISCELLANEOUS -> "Разное"
     }
-    return category.toString()
-}
+
 
 class Description(
     val name: String,
     val id: Int,
-    val category: Category,
+    var category: Category,
 ) {
 
     fun displayInformation() {
