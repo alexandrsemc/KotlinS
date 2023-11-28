@@ -23,12 +23,13 @@ enum class Category {
     MISCELLANEOUS;
 }
 
-private fun setCategory(category: Category) {
+fun setCategory(category: Category) :String{
     when (category) {
         Category.CLOTH -> println("Одежда")
         Category.STATIONERY -> println("Канцелярские товары")
         Category.MISCELLANEOUS -> println("Разное")
     }
+    return category.toString()
 }
 
 class Description(
@@ -38,6 +39,6 @@ class Description(
 ) {
 
     fun displayInformation() {
-        println("Имя товара - $name, идентификатор - $id, категория - $category")
+        println("Имя товара - $name, идентификатор - $id, категория - ${setCategory(category)}")
     }
 }
