@@ -1,11 +1,14 @@
 package lesson_17
 
 class Ship {
-    val name = "Andromeda"
+    var name = "Andromeda"
+        get() = "Имя каробля менять нельзя"
+        set(value:String) {
+            field = "Andromeda"
+        }
     val averageSpeed = 200000
     val portOfRegistration = "Земля"
 }
-
 
 fun main() {
     val ship = Ship()
